@@ -6,15 +6,11 @@
     <title>LesionLens: AI Solutions for Dermatological Image Classification of Melanoma and Other Skin Lesions</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
     <style>
-        /* Set the background image for the body */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://api.deepai.org/job-view-file/db39fd6a-967c-4124-b45d-0d8a9f38a9ef/outputs/output.jpg'); 
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
+            background-color: #f4f7f6;
             color: #333;
             display: flex;
             flex-direction: column;
@@ -29,11 +25,10 @@
             margin-bottom: 20px;
             color: #005f73;
             text-align: center;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.8);
+            background: white;
             padding: 20px;
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -43,8 +38,8 @@
         }
 
         .button {
-            background: #2d9cdb;
-            color: white;
+            background: #e0e0e0;  /* Light gray background */
+            color: #333;
             padding: 12px 24px;
             border: none;
             border-radius: 8px;
@@ -55,23 +50,7 @@
         }
 
         .button:hover {
-            background: #1d75a3;
-        }
-
-        .button-webcam {
-            background: #28a745;
-        }
-
-        .button-webcam:hover {
-            background: #218838;
-        }
-
-        .button-upload {
-            background: #ffc107;
-        }
-
-        .button-upload:hover {
-            background: #e0a800;
+            background: #bdbdbd;  /* Darker gray on hover */
         }
 
         input[type="file"] {
@@ -79,8 +58,8 @@
         }
 
         .file-label {
-            background: #ffc107;
-            color: white;
+            background: #f5f5f5;  /* Soft beige color */
+            color: #333;
             padding: 12px 24px;
             border: none;
             border-radius: 8px;
@@ -91,7 +70,7 @@
         }
 
         .file-label:hover {
-            background: #e0a800;
+            background: #e0e0e0;  /* Light gray on hover */
         }
 
         #webcam-container {
@@ -123,8 +102,7 @@
 <body>
     <h1>LesionLens: AI Solutions for Dermatological Image Classification of Melanoma and Other Skin Lesions</h1>
     <div class="container">
-        <!-- Updated button classes for different colors -->
-        <button class="button button-webcam" onclick="startWebcam()">Use Webcam</button>
+        <button class="button" onclick="startWebcam()">Use Webcam</button>
         <label for="image-upload" class="file-label">Upload Image</label>
         <input type="file" id="image-upload" accept="image/*" onchange="handleFileUpload(event)">
         <div id="webcam-container">Webcam or Image Preview</div>
