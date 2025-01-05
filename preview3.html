@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teachable Machine Image Model</title>
+    <title>LesionLens: AI Solutions for Dermatological Image Classification of Melanoma and Other Skin Lesions</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(120deg, #84fab0, #8fd3f4);
+            background-color: #f4f7f6;
             color: #333;
             display: flex;
             flex-direction: column;
@@ -20,35 +20,37 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.75rem;
+            font-weight: 700;
             margin-bottom: 20px;
-            color: #222;
+            color: #005f73;
+            text-align: center;
         }
 
         .container {
             background: white;
             padding: 20px;
             border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
             width: 90%;
             max-width: 600px;
         }
 
         .button {
-            background: #007BFF;
+            background: #2d9cdb;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 1.1rem;
             transition: background 0.3s;
             margin: 10px;
         }
 
         .button:hover {
-            background: #0056b3;
+            background: #1d75a3;
         }
 
         input[type="file"] {
@@ -58,24 +60,24 @@
         .file-label {
             background: #28a745;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 1.1rem;
             transition: background 0.3s;
             display: inline-block;
         }
 
         .file-label:hover {
-            background: #1e7e34;
+            background: #218838;
         }
 
         #webcam-container {
             margin: 20px auto;
             width: 200px;
             height: 200px;
-            border: 2px dashed #ddd;
+            border: 2px solid #ddd;
             border-radius: 8px;
             display: flex;
             align-items: center;
@@ -83,20 +85,32 @@
         }
 
         #label-container div {
-            margin-top: 5px;
+            margin-top: 10px;
             font-size: 1rem;
             font-weight: 500;
+            color: #00796b;
+        }
+
+        .footer {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 20px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <h1>Teachable Machine Image Model</h1>
+    <h1>LesionLens: AI Solutions for Dermatological Image Classification of Melanoma and Other Skin Lesions</h1>
     <div class="container">
         <button class="button" onclick="startWebcam()">Use Webcam</button>
         <label for="image-upload" class="file-label">Upload Image</label>
         <input type="file" id="image-upload" accept="image/*" onchange="handleFileUpload(event)">
         <div id="webcam-container">Webcam or Image Preview</div>
         <div id="label-container"></div>
+    </div>
+
+    <div class="footer">
+        <p>Powered by AI & TensorFlow.js</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
