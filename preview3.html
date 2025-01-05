@@ -10,10 +10,7 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://drive.google.com/file/d/10mbcI-yzg56jwQAKA7YnIgxHl-uSsNMJ/view?usp=sharing'); 
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat; 
+            background-color: #f4f7f6;
             color: #333;
             display: flex;
             flex-direction: column;
@@ -26,7 +23,7 @@
             font-size: 1.75rem;
             font-weight: 700;
             margin-bottom: 20px;
-            color: #815355;
+            color: #005f73; 
             text-align: center;
         }
 
@@ -40,8 +37,8 @@
             max-width: 600px;
         }
 
-        .button {
-            background: #A56B6D; 
+        .button-webcam {
+            background: #4f9f9f; 
             color: white;
             padding: 12px 24px;
             border: none;
@@ -52,8 +49,8 @@
             margin: 10px;
         }
 
-        .button:hover {
-            background: #815355; 
+        .button-webcam:hover {
+            background: #3c7a7a; /
         }
 
         input[type="file"] {
@@ -61,7 +58,7 @@
         }
 
         .file-label {
-            background: #B47D7F; 
+            background: #d46a6a; 
             color: white;
             padding: 12px 24px;
             border: none;
@@ -73,7 +70,7 @@
         }
 
         .file-label:hover {
-            background: #9A5F60; 
+            background: #b75a5a; 
         }
 
         #webcam-container {
@@ -105,7 +102,7 @@
 <body>
     <h1>LesionLens: AI Solutions for Dermatological Image Classification of Melanoma and Other Skin Lesions</h1>
     <div class="container">
-        <button class="button" onclick="startWebcam()">Use Webcam</button>
+        <button class="button-webcam" onclick="startWebcam()">Use Webcam</button>
         <label for="image-upload" class="file-label">Upload Image</label>
         <input type="file" id="image-upload" accept="image/*" onchange="handleFileUpload(event)">
         <div id="webcam-container">Webcam or Image Preview</div>
