@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melanoma vs Nevus Classifier</title>
+</head>
+<body>
+    <h1>Melanoma vs Nevus Classifier</h1>
+
+    <label for="mir21">Enter miR-21-5p Expression:</label>
+    <input type="number" id="mir21" name="mir21" required><br><br>
+
+    <label for="mir211">Enter miR-211-5p Expression:</label>
+    <input type="number" id="mir211" name="mir211" required><br><br>
+
+    <button onclick="classifyMelanoma()">Classify</button>
+
+    <h2>Results:</h2>
+    <p id="ratio"></p>
+    <p id="diagnosis"></p>
+
+    <script>
+        function classifyMelanoma() {
+            // Get input values
+            var mir21Expression = parseFloat(document.getElementById('mir21').value);
+            var mir211Expression = parseFloat(document.getElementById('mir211').value);
+            
+            // Calculate miR-21-5p/miR-211-5p Ratio
+            var ratio = mir21Expression / mir211Expression;
+            
+            // Classify based on the ratio
+            var diagnosis = ratio >= 2.0 ? "Malignant - Melanoma" : "Benign - Nevus";
+            
+            // Display results
+            document.getElementById('ratio').textContent = "miR-21-5p/miR-211-5p Ratio: " + ratio.toFixed(2);
+            document.getElementById('diagnosis').textContent = "Diagnosis: " + diagnosis;
+        }
+    </script>
+</body>
+</html>
