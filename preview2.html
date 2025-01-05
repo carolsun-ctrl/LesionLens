@@ -53,7 +53,7 @@
             const file = event.target.files[0];
             if (file) {
                 const img = new Image();
-                img.src = URL.createObjectURL(file);
+                img.src = window.URL.createObjectURL(file); // Explicitly use window.URL.createObjectURL
                 img.onload = async () => {
                     // Resize canvas if needed and display the uploaded image
                     const canvas = document.createElement("canvas");
