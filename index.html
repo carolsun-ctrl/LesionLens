@@ -17,13 +17,17 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            background-image: url('your-image.jpg'); /* <-- INSERT YOUR IMAGE LINK HERE */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         h1 {
             font-size: 1.75rem;
             font-weight: 700;
-            margin-bottom: 20px;
-            color: #815355;
+            margin-bottom: 10px; /* Reduced margin to move it up */
+            color: #005f73;
             text-align: center;
         }
 
@@ -35,10 +39,11 @@
             text-align: center;
             width: 90%;
             max-width: 600px;
+            margin-top: 20px; /* Added top margin to space out from header */
         }
 
-        .button {
-            background: #A56B6D;
+        .button-webcam {
+            background: #4f9f9f;
             color: white;
             padding: 12px 24px;
             border: none;
@@ -49,8 +54,24 @@
             margin: 10px;
         }
 
-        .button:hover {
-            background: #815355;
+        .button-webcam:hover {
+            background: #3c7a7a;
+        }
+
+        .file-label {
+            background: #d46a6a;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+            display: inline-block;
+        }
+
+        .file-label:hover {
+            background: #b75a5a;
         }
 
         label, input {
@@ -65,22 +86,6 @@
             width: 80%;
             max-width: 300px;
             margin-bottom: 20px;
-        }
-
-        button {
-            background: #A56B6D;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1.1rem;
-            transition: background 0.3s;
-            margin-top: 10px;
-        }
-
-        button:hover {
-            background: #815355;
         }
 
         h2 {
@@ -107,7 +112,7 @@
         <label for="mir211">Enter miR-211-5p Expression:</label>
         <input type="number" id="mir211" name="mir211" required><br><br>
 
-        <button onclick="classifyMelanoma()">Classify</button>
+        <button class="button-webcam" onclick="classifyMelanoma()">Classify</button>
 
         <h2>Results:</h2>
         <p id="ratio"></p>
