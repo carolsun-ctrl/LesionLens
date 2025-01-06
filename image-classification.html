@@ -50,7 +50,7 @@
         }
 
         .button-webcam:hover {
-            background: #3c7a7a; /
+            background: #3c7a7a;
         }
 
         input[type="file"] {
@@ -97,6 +97,19 @@
             margin-top: 20px;
             text-align: center;
         }
+
+        /* Styling for the link */
+        .link {
+            font-size: 1rem;
+            color: #005f73;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -111,6 +124,7 @@
 
     <div class="footer">
         <p>Powered by AI & TensorFlow.js</p>
+        <a href="https://carolsun-ctrl.github.io/LesionLens/bioclassification.html" class="link">Explore early detection for melanoma and other skin lesions through key biomarkers.</a> 
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
